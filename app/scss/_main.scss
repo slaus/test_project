@@ -1,0 +1,152 @@
+/*!
+ * Main content
+ */
+
+.main {
+  margin-top: -25px;
+
+  & .goals {
+    background: $grey;
+    padding-bottom: 80px;
+
+    &-block {
+      width: 68%;
+      margin: -100px auto 0;
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+
+      @media screen and (max-width: 767px) {
+        margin-top: 0;
+        width: 90%;
+        flex-direction: column;
+      }
+
+      &__text {
+        background: $white;
+        display: inline-block;
+        padding: 0 60px;
+        margin-bottom: -1px;
+        margin-right: -1px;
+        font-family: $font, sans-serif;
+        font-size: 22px;
+        width: calc(50% - 2px);
+        box-sizing: border-box;
+        border: 1px solid $grey;
+        min-height: 230px;
+
+        @media screen and (max-width: 991px) {
+          font-size: 18px;
+        }
+
+        @media screen and (max-width: 767px) {
+          width: 100%;
+          min-height: auto;
+        }
+
+        &--title {
+          color: $orange;
+          text-transform: uppercase;
+          font-size: 13px;
+          font-weight: 600;
+          margin-top: 45px;
+          margin-bottom: -5px;
+        }
+
+        & p {
+          padding-bottom: 30px;
+        }
+      }
+    }
+  }
+
+  & .about {
+    width: 100%;
+    max-width: 770px;
+    margin: 80px auto 0;
+    padding: 0 15px 80px 15px;
+    box-sizing: border-box;
+
+    &-title {
+      font-family: $font, sans-serif;
+      font-weight: 300;
+      font-size: 48px;
+      margin-bottom: 25px;
+    }
+
+    & p {
+      line-height: 26px;
+      margin-bottom: 25px;
+    }
+  }
+
+  & .advantages {
+    background: $grey;
+    padding-top: 90px;
+    padding-bottom: 90px;
+
+    &-title {
+      font-family: $font, sans-serif;
+      font-weight: 300;
+      font-size: 38px;
+      display: block;
+      text-align: center;
+      padding: 0 15px;
+    }
+
+    &-text {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      max-width: 1200px;
+      margin: 60px auto;
+
+      @media screen and (max-width: 767px) {
+        flex-direction: column;
+      }
+
+      &__block {
+        padding: 0 15px;
+        box-sizing: border-box;
+        display: inline-block;
+        width: 32%;
+
+        @media screen and (max-width: 767px) {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          margin-bottom: 40px;
+        }
+
+        &--title {
+          font-family: $font-bold, sans-serif;
+          font-weight: 600;
+          font-size: 20px;
+          margin-top: 30px;
+          position: relative;
+          display: block;
+          margin-bottom: 50px;
+
+          &:after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 25px;
+            height: 2px;
+            background: $orange;
+            top: 50px;
+          }
+        }
+
+        & p {
+          line-height: 25px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

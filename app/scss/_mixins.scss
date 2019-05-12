@@ -1,0 +1,33 @@
+@mixin font-face($name, $filename, $style, $weight) {
+  $folder: '../fonts/';
+  $filepath: $folder + $filename;
+  @font-face {
+    font-family: "#{$name}";
+    font-style: $style;
+    font-weight: $weight;
+
+    src: url($filepath + ".eot");
+    src: url($filepath + ".eot?#iefix") format('embedded-opentype'),
+    url($filepath + ".woff") format('woff'),
+    url($filepath + ".ttf")  format('truetype'),
+    url($filepath + ".svg#" + $name + "") format('svg');
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@include font-face('DINPro', 'DINPro', 'normal', '300');
+@include font-face('DINPro-Medium', 'DINPro-Medium', 'normal', '400');
+@include font-face('DINPro-Bold', 'DINPro-Bold', 'bold', '700');
+
+
+$font: 'DINPro';
+$font-medium: 'DINPro-Medium';
+$font-bold: 'DINPro-Bold';
+
+$black: #222222 !default;
+$black-bg: #161616 !default;
+$orange: #f47821 !default;
+$grey: #ececec !default;
+$grey-dark: #4A4556 !default;
+$white: #ffffff !default;

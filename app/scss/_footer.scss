@@ -1,0 +1,90 @@
+/*!
+ * Footer content
+ */
+
+.footer {
+  background: $black-bg;
+  padding: 70px 0 120px;
+  color: $white;
+
+  &-title {
+    font-family: $font, sans-serif;
+    font-size: 38px;
+    font-weight: 300;
+    display: block;
+    text-align: center;
+  }
+
+  &-form {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    &__block {
+      margin-top: 60px;
+      margin-bottom: -15px;
+
+      &--number {
+        display: block;
+        float: left;
+        width: 64px;
+        height: 64px;
+        border: 1px solid $grey-dark;
+        border-radius: 50%;
+        color: $orange;
+        font-size: 22px;
+        text-align: center;
+        line-height: 64px;
+        margin-bottom: 30px;
+      }
+      &--text {
+        display: block;
+        width: 78%;
+        padding-top: 25px;
+        padding-left: 95px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+
+      & input:not([type=submit]) {
+        background: transparent;
+        padding: 20px 0;
+        margin-left: 30px;
+        margin-top: 10px;
+        width: 75%;
+        color: $grey-dark;
+        font-size: 24px;
+        border: none;
+        border-bottom: 2px solid $grey-dark;
+
+        @media screen and (max-width: 767px) {
+          font-size: 18px;
+        }
+      }
+
+      &--button {
+        background: $white;
+        display: block;
+        color: $orange;
+        padding: 20px 0;
+        margin-left: 100px;
+        margin-top: 115px;
+        width: 75%;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 14px;
+        border: none;
+        border-radius: 30px;
+        transition: .3s;
+
+        &:hover {
+          background: $orange;
+          color: $white;
+          cursor: pointer;
+          transition: .3s;
+        }
+      }
+    }
+  }
+}
